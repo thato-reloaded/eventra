@@ -49,6 +49,7 @@ public class AccountController(SignInManager<User> signInManager) : BaseApiContr
         });
     }
 
+    [Authorize]
     [HttpPost("logout")]
     public async Task<ActionResult> Logout()
     {
