@@ -23,7 +23,7 @@ const ActivityDetailPage = () => {
                 <ActivityDetailsChat />
             </Grid>
             <Grid size={4}>
-                <ActivityDetailsSidebar />
+                <ActivityDetailsSidebar activity={activity} />
             </Grid>
         </Grid>
     )
