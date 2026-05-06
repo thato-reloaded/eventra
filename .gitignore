@@ -486,3 +486,5 @@ API/bin*
 API/appsettings.json
 
 API/eventra.db
+API/eventra.db-wal
+API/eventra.db-shm
