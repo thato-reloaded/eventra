@@ -2,7 +2,6 @@ using Application.Profiles.Commands;
 using Application.Profiles.DTOs;
 using Application.Profiles.Queries;
 using Domain;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -38,4 +37,10 @@ public class ProfilesController : BaseApiController
     {
         return HandleResult(await Mediator.Send(new GetProfile.Query{UserId = userId}));
     } 
+
+    [HttpPut]
+    public async Task<ActionResult> EditProfile(EditProfile.Command command)
+    {
+        return HandleResult(await Mediator.Send(command));
+    }
 }

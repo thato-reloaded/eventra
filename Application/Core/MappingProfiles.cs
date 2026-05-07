@@ -27,6 +27,7 @@ public class MappingProfiles : Profile
 
         #region User
         CreateMap<User, UserProfile>();
+        CreateMap<EditProfileDto, User>();
         #endregion
     }
 }
