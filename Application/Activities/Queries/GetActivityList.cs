@@ -1,4 +1,5 @@
 using Application.Activities.DTOs;
+using Application.Core;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Domain;
@@ -10,15 +11,17 @@ namespace Application.Activities.Queries;
 
 public class GetActivityList
 {
-    public class Query : IRequest<List<ActivityDto>> {}
+    public class Query : IRequest<Result<List<ActivityDto>>> {}
 
-    public class Handler(AppDbContext context, IMapper mapper) : IRequestHandler<Query, List<ActivityDto>>
+    public class Handler(AppDbContext context, IMapper mapper) : IRequestHandler<Query, Result<List<ActivityDto>>>
     {
-        public async Task<List<ActivityDto>> Handle(Query request, CancellationToken cancellationToken)
+        public async Task<Result<List<ActivityDto>>> Handle(Query request, CancellationToken cancellationToken)
         {
-            return await context.Activities
-            .ProjectTo<ActivityDto>(mapper.ConfigurationProvider)
+            var activities = await context.Activities
+                .ProjectTo<ActivityDto>(mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
+
+            return Result<List<ActivityDto>>.Success(activities);
         }
     }
 }
