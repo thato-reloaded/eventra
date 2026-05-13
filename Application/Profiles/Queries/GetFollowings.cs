@@ -1,0 +1,45 @@
+using Application.Core;
+using Application.Profiles.DTOs;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using MediatR;
+using Persistence;
+using Microsoft.EntityFrameworkCore;
+
+namespace Application.Profiles.Queries;
+
+public class GetFollowings
+{
+    public class Query : IRequest<Result<List<UserProfile>>>
+    {
+        public string Predicate { get; set; } = "followers";
+        public required string UserId { get; set; }
+    }
+
+    public class Handler(AppDbContext dbContext, IMapper mapper) : IRequestHandler<Query, Result<List<UserProfile>>>
+    {
+        public async Task<Result<List<UserProfile>>> Handle(Query request, CancellationToken cancellationToken)
+        {
+            var profiles = new List<UserProfile>();
+
+            switch (request.Predicate)
+            {
+                case "followers":
+                    profiles = await dbContext.UserFollowings.Where(x => x.Target.Id == request.UserId)
+                        .Select(x => x.Observer)
+                        .ProjectTo<UserProfile>(mapper.ConfigurationProvider)
+                        .ToListAsync(cancellationToken);
+                break;
+                
+                case "followings":
+                    profiles = await dbContext.UserFollowings.Where(x => x.ObserverId == request.UserId)
+                        .Select(x => x.Target)
+                        .ProjectTo<UserProfile>(mapper.ConfigurationProvider)
+                        .ToListAsync(cancellationToken);
+                break;
+            }
+
+            return Result<List<UserProfile>>.Success(profiles);
+        }
+    }
+}
