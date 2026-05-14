@@ -5,6 +5,7 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Persistence;
 using Microsoft.EntityFrameworkCore;
+using Application.Interfaces;
 
 namespace Application.Profiles.Queries;
 
@@ -16,7 +17,8 @@ public class GetFollowings
         public required string UserId { get; set; }
     }
 
-    public class Handler(AppDbContext dbContext, IMapper mapper) : IRequestHandler<Query, Result<List<UserProfile>>>
+    public class Handler(AppDbContext dbContext, IMapper mapper, IUserAccessor userAccessor) 
+        : IRequestHandler<Query, Result<List<UserProfile>>>
     {
         public async Task<Result<List<UserProfile>>> Handle(Query request, CancellationToken cancellationToken)
         {
@@ -27,7 +29,8 @@ public class GetFollowings
                 case "followers":
                     profiles = await dbContext.UserFollowings.Where(x => x.Target.Id == request.UserId)
                         .Select(x => x.Observer)
-                        .ProjectTo<UserProfile>(mapper.ConfigurationProvider)
+                        .ProjectTo<UserProfile>(mapper.ConfigurationProvider, 
+                            new {currentUserId = userAccessor.GetUserId()})
                         .ToListAsync(cancellationToken);
                 break;
                 
