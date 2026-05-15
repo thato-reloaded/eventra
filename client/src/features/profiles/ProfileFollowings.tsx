@@ -1,0 +1,38 @@
+import { useParams } from "react-router"
+import { useProfile } from "../../lib/hooks/useProfile";
+import { Box, Divider, Typography } from "@mui/material";
+import ProfileCard from "./ProfileCard";
+
+type Props = {
+    activeTab: number
+}
+
+export default function ProfileFollowings({ activeTab }: Props) {
+    const { id } = useParams();
+    const predicate = activeTab === 3 ? 'followers' : 'followings';
+    const { profile, followings, loadingFollowings } = useProfile(id, predicate);
+
+    return (
+        <Box>
+            <Box display='flex'>
+                <Typography variant="h5">
+                    {activeTab === 3
+                        ? `People following ${profile?.displayName}`
+                        : `People ${profile?.displayName} follows`}
+                </Typography>
+            </Box>
+            <Divider sx={{ my: 2 }} />
+            {loadingFollowings ? (
+                <Typography>Loading...</Typography>
+            ) : followings && followings.length === 0 && predicate === 'followings' ? (
+                <Typography>Not following anyone yet</Typography>
+            ) : (
+                <Box display='flex' marginTop={3}>
+                    {followings?.map(profile => (
+                        <ProfileCard key={profile.id} profile={profile} />
+                    ))}
+                </Box>
+            )}
+        </Box>
+    )
+}
