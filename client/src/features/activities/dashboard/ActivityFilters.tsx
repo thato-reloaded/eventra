@@ -4,7 +4,7 @@ import { Box, Typography, MenuList, MenuItem, ListItemText, Paper } from "@mui/m
 import 'react-calendar/dist/Calendar.css';
 import Calendar from "react-calendar";
 
-const ActivityFilers = () => {
+const ActivityFilters = () => {
     return (
         <Box sx={{display: 'flex', flexDirection: 'column', gap: 3, borderRadius: 3}}>
             <Paper sx={{p:3, borderRadius: 3}}>
@@ -43,4 +43,4 @@ const ActivityFilers = () => {
         </Box>
     )
 }
-export default ActivityFilers
+export default ActivityFilters
