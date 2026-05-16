@@ -1,6 +1,6 @@
 import { Button, Grid } from '@mui/material';
 import ActivityList from './ActivityList';
-import ActivityFilers from './ActivityFilers';
+import ActivityFilters from './ActivityFilters';
 import { useActivities } from '../../../lib/hooks/useActivities';
 
 const ActivityDashboard = () => {
@@ -16,11 +16,18 @@ const ActivityDashboard = () => {
                     variant="contained"
                     disabled={!hasNextPage || isFetchingNextPage}
                 >
-                    Laod more
+                    Load more
                 </Button>
             </Grid>
-            <Grid size={4}>
-                <ActivityFilers />
+            <Grid 
+                size={4}
+                sx={{
+                    position: 'sticky',
+                    top: 96,
+                    alignSelf: 'flex-start'
+                }}
+            >
+                <ActivityFilters />
             </Grid>
         </Grid>
     )
