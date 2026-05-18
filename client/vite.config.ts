@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react({
@@ -11,6 +10,12 @@ export default defineConfig({
       
     }),
   ],
+  resolve: {
+    dedupe: ['react', 'react-dom']  // Force single React instance
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-intersection-observer']
+  },
   server: {
     port: 3000,
   },
