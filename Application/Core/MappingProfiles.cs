@@ -28,6 +28,7 @@ public class MappingProfiles : Profile
             .ForMember(d => d.FollowingCount, o => o.MapFrom(s => s.User.Followings.Count))
             .ForMember(d => d.Following, o => o.MapFrom(s => 
                 s.User.Followers.Any(x => x.Observer.Id == currentUserId)));
+        CreateMap<Activity, UserActivityDto>();
         #endregion
 
         #region User Profile

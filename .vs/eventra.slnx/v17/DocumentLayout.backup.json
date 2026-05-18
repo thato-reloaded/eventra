@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\activities\\commands\\createactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\activities\\commands\\createactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\activities\\dtos\\activitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\activities\\dtos\\activitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\activities\\queries\\getuseractivities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\activities\\queries\\getuseractivities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\activities\\queries\\getactivitylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\activities\\queries\\getactivitylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\thator\\documents\\dev\\eventra\\application\\activities\\dtos\\useractivitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\activities\\dtos\\useractivitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CreateActivity.cs",
-              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Commands\\CreateActivity.cs",
-              "RelativeDocumentMoniker": "Application\\Activities\\Commands\\CreateActivity.cs",
-              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Commands\\CreateActivity.cs",
-              "RelativeToolTip": "Application\\Activities\\Commands\\CreateActivity.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA9wCUAAAAMAAAAAAAAAA==",
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Core\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Core\\MappingProfiles.cs",
+              "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T00:05:36.096Z",
+              "WhenOpened": "2026-05-18T14:39:36.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetActivityList.cs",
+              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Queries\\GetActivityList.cs",
+              "RelativeDocumentMoniker": "Application\\Activities\\Queries\\GetActivityList.cs",
+              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Queries\\GetActivityList.cs",
+              "RelativeToolTip": "Application\\Activities\\Queries\\GetActivityList.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:11:29.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetUserActivities.cs",
+              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Queries\\GetUserActivities.cs",
+              "RelativeDocumentMoniker": "Application\\Activities\\Queries\\GetUserActivities.cs",
+              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\Queries\\GetUserActivities.cs",
+              "RelativeToolTip": "Application\\Activities\\Queries\\GetUserActivities.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwC0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:10:14.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActivityDto.cs",
+              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\DTOs\\ActivityDto.cs",
+              "RelativeDocumentMoniker": "Application\\Activities\\DTOs\\ActivityDto.cs",
+              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\DTOs\\ActivityDto.cs",
+              "RelativeToolTip": "Application\\Activities\\DTOs\\ActivityDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA9wBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:03:43.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserActivityDto.cs",
+              "DocumentMoniker": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\DTOs\\UserActivityDto.cs",
+              "RelativeDocumentMoniker": "Application\\Activities\\DTOs\\UserActivityDto.cs",
+              "ToolTip": "C:\\Users\\ThatoR\\Documents\\dev\\eventra\\Application\\Activities\\DTOs\\UserActivityDto.cs",
+              "RelativeToolTip": "Application\\Activities\\DTOs\\UserActivityDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:03:16.472Z",
               "EditorCaption": ""
             }
           ]
