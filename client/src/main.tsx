@@ -12,7 +12,7 @@ import './app/layout/styles.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { router } from './app/router/Routes.tsx';
-import { store, StoreContext } from './features/stores/store.ts';
+import { store, StoreContext } from './lib/stores/store.ts';
 import { ToastContainer } from 'react-toastify';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';

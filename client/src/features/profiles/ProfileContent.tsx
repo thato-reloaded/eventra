@@ -25,7 +25,6 @@ export default function ProfileContent() {
       mt={2}
       p={3}
       elevation={3}
-      height={500}
       sx={{display: 'flex', alignItems: 'flex-start', borderRadius: 3}}
     >
       <Tabs

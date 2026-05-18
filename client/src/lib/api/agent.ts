@@ -1,5 +1,5 @@
 import axios from "axios";
-import { store } from "../../features/stores/store";
+import { store } from "../stores/store";
 import { toast } from "react-toastify";
 import { router } from "../../app/router/Routes";
 
